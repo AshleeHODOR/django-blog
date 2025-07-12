@@ -10,6 +10,7 @@
 ###### 4.1. Your `manage.py` file should be at the root of your project directory.
 ###### 4.2. Your configuration directory should be named `config`
 ###### 4.3. Do not continue if the last two points aren't correct.
+
 ### 5. Create 3 django apps:
 ###### 5.1. pages
 ###### 5.2. posts

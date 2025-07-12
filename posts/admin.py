@@ -1,3 +1,13 @@
 from django.contrib import admin
+from .models import Post
+#reverse = from posts import models
 
-# Register your models here.
+
+class PostAdmin(admin.ModelAdmin):
+    list_display = [
+        "title", "subtitle", "author", 
+        "status", "created_on"
+    ]
+
+admin.site.register(Post, PostAdmin)
+
