@@ -14,11 +14,13 @@
 ###### 5.1. pages
 ###### 5.2. posts
 ###### 5.3. accounts
-### 6. Create and configure a directory for templates, and subdirectories for each app.
-### 7. Create a base.html directory within your templates directory, which will serve as the parent template for all child templates within this project.
-### 8. Create a home page.
-### 9. Create an about page.
-### 10. Make sure your site is navigable, such that all pages are accessible by clicking on links.
+
+### 6. Create and configure a directory for templates, and subdirectories for each app. WHAT???
+
+### 7. Create a base.html directory within your templates directory, which will serve as the parent template for all child templates within this project. 
+### 8. Create a home page. D
+# 9. Create an about page. D
+### 10. Make sure your site is navigable, such that all pages are accessible by clicking on links. D
 ## Note
 ### Your home page should, at a minimum, explain the purpose of the app, while your about page can be about you or a fictional company.
 
