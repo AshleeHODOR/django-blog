@@ -9,7 +9,6 @@ class Status(models.Model):
     def __str__(self):
         return self.name
 
-
 class Post(models.Model):
     title = models.CharField(max_length=128)
     subtitle = models.CharField(max_length=256)
@@ -29,12 +28,5 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse("detail", args=[self.id])
-    
-    
-    """
-    Status st1 = new Status()
-    st1.name = "Published"
-    st1.description = "This is a post that is published!"
 
-    Published
-    """
+

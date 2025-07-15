@@ -2,6 +2,17 @@
 
 from django.db import migrations
 
+def populate_status(apps, schemadeditor):
+    entries = {
+        "published": "A post visable to all users", 
+        "draft": "A post only the author can view", 
+        "archived": "A post visible to logged in users"
+    }
+    Status = apps.get_model("posts", "Status")
+    for key, value in entries.items():
+        status_obj = Status(name=key, description=value)
+        status_obj.save()
+
 
 class Migration(migrations.Migration):
 
