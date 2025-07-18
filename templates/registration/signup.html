@@ -6,8 +6,8 @@
 <h1>Sign Up</h1>
 <form method="POST">
     {% csrf_token %}
-    { form.as_p }
+    {{ form.as_p }}
     <input type="submit" class="btn btn-success" value="Sign Up">
 </form>
 <p>Already have an account? <a href="{% url 'login' %} " class="btn btn-primary" Click Here</a> </p>
-{% endblock content %}
+{% endblock content %} 

@@ -8,7 +8,7 @@
 2. Make it so that users can view a list of all posts.
 3. Make it so that users can view a detail page for a given post (accessible through the list view template).
 4. Make sure your site is navigable (everything is reachable via links).
-# 5. The user should be able to delete posts by using the appropriate link and view.
+5. The user should be able to delete posts by using the appropriate link and view.
 6. The user should be able to edit existing posts by using the appropriate link and view.
 
 ## Note
