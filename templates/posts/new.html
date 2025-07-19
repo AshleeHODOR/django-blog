@@ -1,12 +1,20 @@
 {% extends 'base.html' %}
 
-{% block title %}New Post{% endblock title %}
+{% block title %} ✍️ Craft a New Christmas Masterpiece! 🎄 {% endblock title %}
 
 {% block content %}
-<h1>New Post</h1>
-<form method="POST"> 
+<div class="container">
+    <h1>✍️ Ready to Pen a New Christmas Masterpiece?! 🌟 🎄</h1>
+    <p class="lead text-center mb-5" style="font-family: 'Snowburst One', cursive; color: #800080; font-size: 2rem; text-shadow: 1px 1px 2px rgba(255,255,255,0.7);">
+        Unleash your most wonderful holiday ideas here! Every word is a sprinkle of Christmas magic!
+    </p>
+
+    <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" class="btn btn-success" value="Create"> 
-</form>
+        <div class="text-center mt-4">
+            <input type="submit" class="btn btn-christmas-create" value="✨ Bring Your Christmas Story to Life! ✨">
+        </div>
+    </form>
+</div>
 {% endblock content %}

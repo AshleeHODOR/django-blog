@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
 
-{% block title %} Edit Post {% endblock title%}
+{% block title %} ✍️ Santa's Workshop: Polish Your Yuletide Masterpiece! ✨ {% endblock title%}
 
 {% block content %}
-  <h1>Edit Post</h1>
-  <form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <imput type="submit" class="btn btn-primary" value="Edit"></imput>
-  </form>
+<div class="container">
+    <h1>✍️ Welcome to Santa's Workshop: Polish Your Yuletide Masterpiece! ✨</h1>
+    <p class="lead text-center mb-5" style="font-family: 'Snowburst One', cursive; color: #5B2C6F; font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(255,255,255,0.7);">
+        This is where the magic happens! 🎄 Carefully refine your festive creation, ensuring every word sparkles like fresh fallen snow! 🎄</p>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="text-center mt-4">
+            <input type="submit" class="btn btn-christmas-edit-submit" value="✨ Deliver the Perfect Gift! (Update Post) ✨">
+        </div>
+    </form>
+</div>
 {% endblock content %}

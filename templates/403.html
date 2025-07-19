@@ -1,8 +1,19 @@
 {% extends 'base.html' %}
 
-{% block title %} Forbidden (403) {% endblock title %}
+{% block title %} 🚫 Naughty List Alert! (403) 🦌 {% endblock title %}
 
 {% block content %}
-<h1>Forbidden (403)</h1>
-<p>You are not authorized to access the page or resource you requested.</p>
+
+
+<div class="container">
+    <h1>🚫 Oh Dear! Looks Like You're on the Naughty List! (Error 403) 🎅</h1>
+    <p>It seems your sleigh took a slight detour, and you're not authorized to land on this particular rooftop.</p>
+    <p>Perhaps Santa's elves misplaced your access cookies, or maybe you've been a *little* bit mischievous this year?</p>
+    <img src="https://media.giphy.com/media/xT9Igv4oUvjJ9Jq2A/giphy.gif" alt="Elf on Naughty List" class="christmas-image">
+    <p class="mt-4" style="font-size: 1.3rem; color: #5b2c6f;">Don't worry, even the best reindeer get turned around sometimes! Double-check your jolly credentials, or perhaps visit our homepage to find your way back to the nice list.</p>
+    <a href="{% url 'home' %}" class="btn btn-warning btn-lg mt-3" style="font-family: 'Permanent Marker', cursive; font-size: 1.8rem; padding: 15px 30px; border-radius: 50px; background-image: linear-gradient(to right, #f1c40f, #f39c12); border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+        ✨ Return to the North Pole Main Hub! ✨
+    </a>
+</div>
+
 {% endblock content %}

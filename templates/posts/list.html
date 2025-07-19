@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 
-{% block title %}Posts{% endblock title %}
+{% block title %} 📜 Santa's Scroll of Yuletide Tales! 🌟 {% endblock title %}
 
 {% block content %}
 <h1>{{ title }} Posts</h1>
@@ -18,3 +18,34 @@
 </div>
 {% endfor %}
 {% endblock content %} 
+
+<div class="container">
+    <h1>{{ title }} 📜 Santa's Scroll of Yuletide Tales! 🌟</h1>
+    <p class="lead text-center mb-5" style="font-family: 'Snowburst One', cursive; color: #5B2C6F; font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(255,255,255,0.7);">
+        Unwrap each festive story and dive into a world of holiday wonder and joy!
+    </p>
+
+    {% for post in post_list %}
+    <div class="card christmas-card">
+        <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <h6 class="card-subtitle mb-2">A Chapter from the North Pole!</h6>
+            <p class="card-text">{{ post.body|truncatechars:120 }} <span style="font-style: italic; color: #888;">...and many more holiday secrets!</span></p>
+            
+            <a href="{% url 'detail' post.id %}" class="christmas-link">
+                Continue the Festive Reading! <i class="fas fa-arrow-right"></i> </a>
+        </div>
+    </div>
+    {% empty %}
+    <div class="text-center p-5" style="background-color: rgba(255, 255, 255, 0.8); border-radius: 20px; border: 3px dashed #ef5350;">
+        <h2 style="font-family: 'Permanent Marker', cursive; color: #ef5350;">Oh no! It looks like our Christmas Stocking is Empty! 🎁</h2>
+        <p style="font-family: 'Mountains of Christmas', cursive; color: #34495e; font-size: 1.2rem;">Santa's elves haven't quite finished preparing these tales yet. Check back soon for more holiday magic!</p>
+        <img src="https://media.giphy.com/media/l0HlTLz10GjX9m8Q8/giphy.gif" alt="Empty Stocking" class="img-fluid mt-3" style="max-width: 300px; border-radius: 15px;">
+    </div>
+    {% endfor %}
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEbFLcHjLxw/wQ90dY+3Q6C+PzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</div>
+{% endblock content %}
+What Makes This Post List Overflowing with Christmas?
+Enchanted Title: The browser tab now joyfully declares: "📜 Santa's Scroll of Yuletide Tales! 🌟".

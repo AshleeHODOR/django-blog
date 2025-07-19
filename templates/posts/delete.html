@@ -1,12 +1,22 @@
 {% extends 'base.html' %}
 
-{% block title %} Delete Post {% endblock title %} 
+{% block title %} 🎅 Delete Post 🎅 {% endblock title %} 
 
 {% block content %}
     <h1>Delete Post</h1>
     <p>Are you sure you want to delete: "{{ post.title }}"?</p>
-  <form method="POST">
-    {% csrf_token %}
-    <input type="submit" class="btn btn-danger" value="Confirm">
-  </form>
+    <div class="container">
+    <h1>🚨 Are You SURE You Want to Send This to the North Pole Naughty Bin?! 🎄 🗑️</h1>
+    <p>Are you absolutely, positively certain you want to forever **banish from Santa's Sleigh** the cherished tale of: "<strong>{{ post.title }}</strong>"?</p>
+    <p>This action is more irreversible than trying to re-gift a fruitcake! Once it's gone, even the most magical Christmas wish can't bring it back! 🎄🎄🎄 </p>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="submit" class="btn btn-christmas-confirm" value="Yes, Send It to the Land of Misfit Toys!">
+        </div>
+    </form>
+    <a href="javascript:history.back()" class="btn btn-outline-secondary mt-4" style="font-family: 'Mountains of Christmas', cursive; font-size: 1.2rem; border-color: #27ae60; color: #27ae60; border-width: 2px;">
+        🎅 Oops! Take Me Back to the Nice List! 🎄 </a>
+</div>
+
 {% endblock content %}

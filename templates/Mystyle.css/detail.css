@@ -1,0 +1,138 @@
+/* Unique styling for the Christmas Post Detail Page */
+.container {
+    background-color: rgba(255, 255, 255, 0.99); /* Almost opaque white, like fresh snow */
+    border-radius: 40px; /* Super rounded, like a delightful snowglobe */
+    padding: 60px; /* More space for the grand tale */
+    margin-top: 40px; /* Give the top bar some breathing room */
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45), 0 0 60px rgba(255, 223, 0, 0.9); /* Deep, shimmering golden glow */
+    animation: presentReveal 1.2s ease-out; /* Like a present being unwrapped! */
+    position: relative; /* For the decorative elements */
+    overflow: hidden; /* Keep the ribbons inside */
+}
+
+/* Decorative ribbons and bows! */
+.container::before, .container::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to bottom, #dc3545, #bd2130); /* Rich red ribbon */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+.container::before { /* Vertical ribbon */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 30px;
+    transform: translateX(-50%);
+}
+.container::after { /* Horizontal ribbon */
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 30px;
+    transform: translateY(-50%);
+}
+/* A golden bow in the center! */
+.container-bow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2); /* Slightly larger bow */
+    width: 80px;
+    height: 80px;
+    background-color: #ffd700; /* Gold */
+    border-radius: 50%;
+    border: 5px solid #ffc107; /* Brighter gold outline */
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), inset 0 0 10px rgba(255, 255, 255, 0.7);
+    z-index: 2;
+    animation: bowTwinkle 1.5s infinite alternate; /* Twinkling effect */
+}
+.container-bow::before, .container-bow::after {
+    content: '';
+    position: absolute;
+    background-color: #ffd700;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.container-bow::before { top: -10px; left: -10px; }
+.container-bow::after { bottom: -10px; right: -10px; }
+
+
+h1 {
+    font-family: 'Mountains of Christmas', cursive; /* The main Christmas font */
+    font-size: 5rem; /* Grand, welcoming title */
+    color: #c0392b; /* Rich, festive red */
+    text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.6), 0 0 25px #f05e4b; /* Deep shadow with an inner glow */
+    margin-bottom: 20px;
+    animation: textGlow 2s infinite alternate; /* Soft glowing effect */
+    position: relative;
+    z-index: 3; /* Ensure text is above ribbons */
+}
+h3 {
+    font-family: 'Snowburst One', cursive; /* Whimsical subtitle font */
+    font-size: 2.5rem; /* Larger, more enchanting subtitle */
+    color: #27ae60; /* Vibrant holly green */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 3;
+}
+small {
+    font-family: Arial, sans-serif; /* Keep attribution clear */
+    font-size: 1.1rem; /* Clearer small text */
+    color: #7f8c8d; /* A subtle grey, like aged parchment */
+    display: block; /* Ensure it takes its own line */
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 3;
+}
+p {
+    font-family: Georgia, serif; /* Classic, readable body font */
+    font-size: 1.3rem; /* Comfortable reading size */
+    line-height: 1.8; /* More spacious line height */
+    color: #34495e; /* Deep blue-grey for main text */
+    text-align: justify; /* Nice justified text */
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 3;
+}
+.christmas-button-group {
+    margin-top: 50px;
+    position: relative;
+    z-index: 3;
+}
+.btn-christmas-edit, .btn-christmas-delete {
+    font-family: 'Permanent Marker', cursive; /* Fun, distinct button font */
+    font-size: 1.5rem; /* Larger button text */
+    padding: 15px 30px;
+    border-radius: 40px; /* Softly rounded like candy canes */
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 15px; /* Space between buttons */
+}
+.btn-christmas-edit {
+    background-image: linear-gradient(to right, #f39c12, #f1c40f); /* Golden glow for edit */
+    color: #fff;
+}
+.btn-christmas-edit:hover {
+    transform: scale(1.1) rotate(-3deg); /* Playful rotate on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 0 25px #ffd700;
+}
+.btn-christmas-delete {
+    background-image: linear-gradient(to right, #dc3545, #c82333); /* Fiery red for delete */
+    color: #fff;
+}
+.btn-christmas-delete:hover {
+    transform: scale(1.1) rotate(3deg); /* Opposite playful rotate */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 0 25px #ff4d4d;
+}
+
+/* Keyframe animations */
+@keyframes presentReveal {
+    0% { opacity: 0; transform: scale(0.8) translateY(50px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+}

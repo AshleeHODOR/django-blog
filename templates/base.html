@@ -7,9 +7,15 @@
     <title>{% block title %} {% endblock title%}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&family=Snowburst+One&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="{% static 'css/christmas.css' %}" rel="stylesheet">
 
 </head>
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger text-white py-3 shadow">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white fs-3" href="#"> 🎅 The HODOR Holiday Hub 🎁 </a>
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
 <div class="container-fluid">
@@ -32,7 +38,7 @@
                 {% else %}
                     <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
                     <a class="nav-link" href="{% url 'login' %}">Log In</a>
-                    <a class="nav-link" href="{% url 'drafts' %}">Drafts</a>
+                    <a class="nav-link" href="{% url 'draft' %}">Drafts</a>
                     <a class="nav-link" href="{% url 'archives' %}">Archives</a>
                 {% endif %}
             </li>

@@ -1,0 +1,93 @@
+body {
+    background: linear-gradient(to top, #ffffff 0%, #c2e9fb 100%);
+    background-attachment: fixed;
+    font-family: 'Comic Sans MS', cursive;
+    color: #900020;
+    animation: snowfall 30s linear infinite;
+}
+
+/* Sparkling snowflake animation */
+@keyframes snowfall {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 1000px; }
+}
+
+.snowflakes::before {
+    content: "❄️🎄✨❄️🎅✨❄️";
+    font-size: 4rem;
+    animation: blinkSparkle 1.5s infinite alternate;
+}
+
+@keyframes blinkSparkle {
+    from { opacity: 0.2; transform: scale(0.9); }
+    to   { opacity: 1; transform: scale(1.1); }
+}
+
+/* Jolly title */
+.festive-title {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px #ff0000;
+    color: green;
+    animation: bounceTitle 2s infinite;
+}
+
+@keyframes bounceTitle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Elf list styles */
+.elf-list li {
+    margin: 10px 0;
+    background-color: #fffbe6;
+    border-left: 6px solid #d10f0f;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Reindeer facts styles */
+.reindeer-facts {
+    background: repeating-linear-gradient(
+        45deg,
+        #f3f3f3,
+        #f3f3f3 10px,
+        #ffe6e6 10px,
+        #ffe6e6 20px
+    );
+    padding: 20px;
+    border: 2px dashed #b30000;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+/* Buttons with bounce and glow */
+.santa-button {
+    background: radial-gradient(circle, #ff4d4d, #990000);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    box-shadow: 0 0 10px #ff8080;
+    cursor: pointer;
+    animation: pulseJoy 2s infinite;
+}
+
+@keyframes pulseJoy {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); box-shadow: 0 0 20px #ff6666; }
+    100% { transform: scale(1); }
+}
+
+/* Footer that's sweeter than a gumdrop */
+.north-pole-footer {
+    background-color: #e60000;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1rem;
+    border-top: 4px dashed #ffffff;
+    margin-top: 30px;
+}

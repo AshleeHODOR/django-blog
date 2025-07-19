@@ -1,0 +1,82 @@
+/* A blizzard of festive styles! */
+body {
+    background: linear-gradient(to bottom, #d4edda, #cce5ff, #f8d7da); /* Soft gradients like a winter sky */
+    font-family: 'Mountains of Christmas', cursive; /* The quintessential Christmas font */
+    color: #28a745; /* Holly green! */
+    overflow-x: hidden; /* To prevent horizontal scroll from animations */
+}
+.navbar {
+    background-image: linear-gradient(to right, #dc3545, #fd7e14); /* A gradient of Santa's suit! */
+    border-bottom: 5px solid #ffc107; /* Golden tinsel border! */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Deeper, merrier shadow */
+    animation: sparkleNav 2s infinite alternate;
+}
+.navbar-brand {
+    font-size: 3.5rem !important; /* HUGE, joyful brand! */
+    color: #ffffff !important; /* Pure snow white! */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6), 0 0 15px #ffd700; /* Super festive text shadow with a golden glow! */
+    animation: jingleBellShake 0.8s infinite alternate;
+}
+.nav-link {
+    font-size: 1.5rem !important;
+    color: #ffffff !important; /* White as fresh fallen snow! */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.nav-link:hover {
+    color: #ffd700 !important; /* Golden glow on hover! */
+    transform: scale(1.1) rotate(5deg); /* A little dance of joy! */
+}
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1); /* Make the toggler icon white */
+}
+.container {
+    background-color: rgba(255, 255, 255, 0.95); /* A slightly transparent snowy backdrop */
+    border-radius: 25px; /* Rounded like a beautiful ornament */
+    padding: 40px; /* More generous padding for holiday cheer */
+    margin-top: 30px; /* Give the nav some breathing room */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 30px rgba(255, 215, 0, 0.7); /* Deep shadow with a golden halo */
+    animation: fadeInScale 1.5s ease-out;
+}
+
+/* Absolutely wild animations! */
+@keyframes jingleBellShake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    75% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+}
+
+@keyframes sparkleNav {
+    0% { border-color: #ffc107; }
+    50% { border-color: #ffd700; box-shadow: 0 8px 20px rgba(255, 215, 0, 0.9); }
+    100% { border-color: #ffc107; }
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Snowfall effect */
+.snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999; /* Ensure snow is on top */
+}
+.snowflake {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: snowfall linear infinite;
+}
+@keyframes snowfall {
+    0% { transform: translateY(-10%); opacity: 0; }
+    100% { transform: translateY(100%); opacity: 1; }
+}
