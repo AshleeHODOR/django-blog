@@ -1,0 +1,144 @@
+.container {
+    background-color: rgba(255, 255, 255, 0.25); /* Slightly more opaque background for content */
+    border: 8px ridge #FFD700; /* Gold ridge border for extra flair */
+    padding: 30px 40px;
+    margin: 40px auto;
+    max-width: 900px;
+    border-radius: 30px;
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.8), inset 0 0 20px rgba(255, 215, 0, 0.5); /* Stronger glow with inner glow */
+    position: relative;
+    overflow: hidden;
+    animation: pulseGlow 3s infinite alternate; /* Pulsing glow for the container */
+}
+
+/* Keyframe for pulseGlow animation */
+@keyframes pulseGlow {
+    from {
+        box-shadow: 0 0 40px rgba(255, 215, 0, 0.8), inset 0 0 20px rgba(255, 215, 0, 0.5);
+    }
+    to {
+        box-shadow: 0 0 60px rgba(255, 215, 0, 1), inset 0 0 30px rgba(255, 215, 0, 0.7);
+    }
+}
+
+/* Header for the Archives page */
+h1 {
+    font-family: 'Mountains of Christmas', cursive, sans-serif; /* A more thematic Christmas font */
+    font-size: 4.5em; /* Even larger title */
+    color: #FF0000; /* Bright Red */
+    text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.6), 2px 2px 0 #008000; /* Strong shadow with green outline */
+    animation: tada 1.5s ease-in-out infinite; /* Ta-da animation for the title */
+    margin-bottom: 25px;
+}
+
+/* Keyframe for tada animation */
+@keyframes tada {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+    10%, 20% {
+        transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%, 50%, 70%, 90% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%, 60%, 80% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+/* Styling for the lead paragraph (p.lead) */
+p.lead {
+    font-family: 'Snowburst One', cursive; /* Keeping the specified font */
+    color: #8B008B !important; /* Dark Magenta, using !important to override inline style if necessary */
+    font-size: 2.2em !important; /* Slightly larger */
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.8), 1px 1px 0 #FFFFFF; /* Stronger shadow with white outline */
+    margin-bottom: 40px;
+    line-height: 1.4;
+    animation: slideInUp 1.5s ease-out; /* Slide in from bottom */
+}
+
+/* Keyframe for slideInUp animation */
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Form styling (reusing from previous, but can be slightly adjusted if needed) */
+form {
+    background-color: rgba(255, 255, 255, 0.4); /* A bit more transparent */
+    padding: 35px;
+    border-radius: 20px;
+    border: 7px dashed #008000; /* Green dashed border */
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.7); /* Brighter green glow */
+    margin-top: 30px;
+}
+
+/* Input fields within this form specifically */
+form input[type="text"],
+form input[type="password"],
+form textarea { /* Assuming your form might have a textarea for the letter content */
+    width: calc(100% - 24px); /* Adjust for padding and border */
+    padding: 12px;
+    margin-top: 8px;
+    border: 3px solid #FF4500; /* Orange-Red border */
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.95); /* Nearly opaque white */
+    color: #8B0000; /* Dark Red text */
+    font-size: 1.2em;
+    transition: all 0.3s ease-in-out;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form textarea:focus {
+    border-color: #00BFFF; /* Deep Sky Blue on focus */
+    box-shadow: 0 0 15px #00BFFF;
+    outline: none;
+}
+
+/* Custom button for the submit action */
+.btn-christmas-create {
+    background: linear-gradient(to right, #008000, #32CD32, #FFD700); /* Green to Gold gradient */
+    color: #FFFFFF;
+    font-size: 1.8em; /* Large text for the button */
+    padding: 18px 35px;
+    border: none;
+    border-radius: 50px; /* Pill-shaped button */
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+    animation: glowingButton 2s infinite alternate; /* Glowing animation for the button */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Spaced out letters */
+}
+
+/* Keyframe for glowingButton animation */
+@keyframes glowingButton {
+    from {
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.7), 0 0 20px rgba(0, 128, 0, 0.7);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(255, 215, 0, 1), 0 0 40px rgba(0, 128, 0, 1);
+    }
+}
+
+.btn-christmas-create:hover {
+    background: linear-gradient(to right, #FFD700, #32CD32, #008000); /* Reverse gradient on hover */
+    transform: scale(1.08); /* Enlarge slightly more on hover */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7);
+}
+
+/* Text alignment for the button's div */
+.text-center {
+    text-align: center;
+}

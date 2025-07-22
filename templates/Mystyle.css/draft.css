@@ -1,0 +1,133 @@
+h1 {
+    font-family: 'Mountains of Christmas', cursive, sans-serif;
+    font-size: 4.8em; /* Slightly larger than Archives H1 */
+    color: #008000; /* Bright Green */
+    text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.6), 2px 2px 0 #FF0000; /* Strong shadow with red outline */
+    animation: pulseScale 2s ease-in-out infinite alternate; /* Pulsing scale animation for the title */
+    margin-bottom: 25px;
+}
+
+/* Keyframe for pulseScale animation */
+@keyframes pulseScale {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.03);
+    }
+}
+
+
+/* Styling for the introductory paragraph */
+p {
+    font-family: 'Snowburst One', cursive; /* Keeping the specified font */
+    color: #FF4500 !important; /* Orange-Red, using !important if necessary to override base p styles */
+    font-size: 2.0em !important; /* Adjusted size */
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.8), 1px 1px 0 #ADD8E6; /* Stronger shadow with light blue outline */
+    margin-bottom: 30px;
+    line-height: 1.4;
+    animation: bounceIn 1s ease-out; /* A single bounce in animation */
+}
+
+/* Keyframe for bounceIn animation */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Form styling for the workshop (reusing, but emphasizing borders) */
+form {
+    background-color: rgba(255, 255, 255, 0.35); /* Slightly more opaque for the workshop feel */
+    padding: 40px;
+    border-radius: 25px;
+    border: 10px solid #FFD700; /* Thick Gold solid border */
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.9), inset 0 0 15px rgba(255, 215, 0, 0.6); /* Gold glow with inner glow */
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden; /* For any potential internal decorations */
+}
+
+/* Input fields within this form specifically */
+form input[type="text"],
+form input[type="password"],
+form textarea { /* Assuming your form might have a textarea for the letter content */
+    width: calc(100% - 28px); /* Adjust for padding and a thicker border */
+    padding: 14px;
+    margin-top: 10px;
+    border: 4px solid #8A2BE2; /* Blue Violet border */
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.98); /* Almost completely opaque white */
+    color: #8B0000; /* Dark Red text */
+    font-size: 1.3em;
+    transition: all 0.4s ease-in-out;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form textarea:focus {
+    border-color: #FF1493; /* Deep Pink on focus */
+    box-shadow: 0 0 20px #FF1493;
+    outline: none;
+}
+
+/* Custom button for the submit action (reusing with slight animation tweak) */
+.btn-christmas-create {
+    background: linear-gradient(to right, #00BFFF, #32CD32, #FFD700); /* Blue, Green, Gold gradient */
+    color: #FFFFFF;
+    font-size: 2.0em; /* Even larger text */
+    padding: 20px 40px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+    transition: all 0.4s ease;
+    animation: glowingButton 1.5s infinite alternate ease-in-out; /* Faster glowing button */
+    text-transform: uppercase;
+    letter-spacing: 3px; /* More spaced out */
+}
+
+.btn-christmas-create:hover {
+    background: linear-gradient(to right, #FFD700, #32CD32, #00BFFF); /* Reverse gradient on hover */
+    transform: scale(1.1); /* Enlarge slightly more on hover */
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.8);
+}
+
+/* Add a new element for a "sparkle" effect around the form or container */
+.sparkle-effect {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #FFD700; /* Gold */
+    border-radius: 50%;
+    box-shadow: 0 0 10px #FFD700, 0 0 20px #FFFFFF;
+    animation: sparkle 2s infinite ease-in-out;
+    opacity: 0; /* Start hidden */
+    z-index: 1;
+}
+
+@keyframes sparkle {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1) rotate(180deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0) rotate(360deg);
+        opacity: 0;
+    }
+}

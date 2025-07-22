@@ -26,9 +26,21 @@ class PostCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
-class PostDetailView(DetailView):
+class PostDetailView(UserPassesTestMixin, DetailView):
     template_name = "posts/detail.html"
     model = Post
+
+    def test_func(self):
+        post = self.get_object()
+        if post.status.name == "published":
+            return True
+        elif post.status.name == "archived" and self.request.user.is_authenticated:
+            return True
+        elif post.status.name == "draft" and self.request.user == post.author:
+            return True
+        else:
+            False 
+    
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     template_name = "posts/edit.html"

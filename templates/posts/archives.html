@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} ✍️ The Archives 🎄 {% endblock title %}
+
+{% block content %}
+<div class="container">
+    <h1>✍️ Find old Santa letters here!  🌟 🎄</h1>
+    <p class="lead text-center mb-5" style="font-family: 'Snowburst One', cursive; color: #800080; font-size: 2rem; text-shadow: 1px 1px 2px rgba(255,255,255,0.7);">
+        Find all your old posts to remind yourself how much you love Santa Clause!!!
+    </p>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="text-center mt-4">
+            <input type="submit" class="btn btn-christmas-create" value="✨ Bring Your Christmas Story to Life! ✨">
+        </div>
+    </form>
+</div>
+{% endblock content %}

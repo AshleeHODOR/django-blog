@@ -1,0 +1,163 @@
+body {
+    background: linear-gradient(to right, #FF0000, #008000, #FFD700); /* Red, Green, Gold gradient */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* A less formal, playful font */
+    color: #FFFFFF; /* White text for contrast */
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden; /* Prevent horizontal scroll from animations */
+}
+
+/* Header styling */
+h1 {
+    font-size: 4em;
+    color: #FFD700; /* Gold */
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Strong shadow */
+    animation: bounce 1s infinite alternate; /* Bouncing animation for the title */
+    position: relative;
+    z-index: 2; /* Ensure it's above other elements if needed */
+}
+
+/* Keyframe for bounce animation */
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1.8em;
+    color: #ADD8E6; /* Light Blue/Ice color */
+    margin-top: 20px;
+    animation: pulse 2s infinite; /* Pulsing animation for the paragraph */
+}
+
+/* Keyframe for pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Container for content - give it a festive border and background */
+.content-container {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    border: 10px dashed #8B0000; /* Dark Red dashed border */
+    padding: 40px;
+    margin: 50px auto;
+    max-width: 800px;
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(255, 255, 0, 0.7); /* Glow effect */
+    position: relative;
+    overflow: hidden; /* Hide overflowing decorations */
+}
+
+/* Christmas light effect (randomly positioned circles) */
+.light {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FF4500; /* Orange-Red */
+    box-shadow: 0 0 15px #FF4500;
+    animation: twinkle 1.5s infinite alternate;
+    z-index: 1;
+}
+
+/* Twinkle animation for lights */
+@keyframes twinkle {
+    from {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* More lights with different colors and positions */
+.light:nth-child(2) {
+    top: 10%;
+    left: 80%;
+    background-color: #32CD32; /* Lime Green */
+    box-shadow: 0 0 15px #32CD32;
+    animation-delay: 0.3s;
+}
+
+.light:nth-child(3) {
+    top: 50%;
+    left: 5%;
+    background-color: #8A2BE2; /* Blue Violet */
+    box-shadow: 0 0 15px #8A2BE2;
+    animation-delay: 0.6s;
+}
+
+.light:nth-child(4) {
+    bottom: 20%;
+    right: 15%;
+    background-color: #00BFFF; /* Deep Sky Blue */
+    box-shadow: 0 0 15px #00BFFF;
+    animation-delay: 0.9s;
+}
+
+.light:nth-child(5) {
+    top: 25%;
+    left: 40%;
+    background-color: #FF1493; /* Deep Pink */
+    box-shadow: 0 0 15px #FF1493;
+    animation-delay: 1.2s;
+}
+
+/* Confetti-like effect (small squares) */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #FF0000; /* Red */
+    opacity: 0.7;
+    animation: fall 10s infinite linear;
+    z-index: 0;
+}
+
+/* Fall animation for confetti */
+@keyframes fall {
+    from {
+        transform: translateY(-100px) rotate(0deg);
+    }
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+/* Different confetti colors and starting positions */
+.confetti:nth-child(even) {
+    background-color: #008000; /* Green */
+    left: 10%;
+    animation-delay: 2s;
+}
+
+.confetti:nth-child(odd) {
+    background-color: #FFD700; /* Gold */
+    left: 50%;
+    animation-delay: 4s;
+}
+
+.confetti:nth-child(3n) {
+    background-color: #ADD8E6; /* Light Blue */
+    left: 90%;
+    animation-delay: 6s;
+}
